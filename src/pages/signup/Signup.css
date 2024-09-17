@@ -1,0 +1,19 @@
+.auth-form{
+    max-width: 360px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
+    font-size: 0.9em;
+}   
+.auth-form h2{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.auth-form input:last-child{
+    margin-bottom: 5%;
+    
+}

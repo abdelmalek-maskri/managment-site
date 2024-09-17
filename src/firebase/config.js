@@ -1,6 +1,7 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import "firebase/storage";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -17,9 +18,11 @@ const projectAuth = firebase.auth();
 
 const db = firebase.firestore();
 
+const firebaseStorage = firebase.storage();
+
 //timestamp
 
 const timestamp = firebase.firestore.Timestamp;
 
-export { projectAuth, db , timestamp};
+export { projectAuth, db , firebaseStorage,timestamp};
 
