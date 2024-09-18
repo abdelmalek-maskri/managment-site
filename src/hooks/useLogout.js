@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { projectAuth } from "../firebase/config";
+import { projectAuth, db } from "../firebase/config";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 export const useLogout = () => {
@@ -13,6 +13,9 @@ export const useLogout = () => {
         setIsPending(true);
 
         try{    
+
+            await db.collection('users').doc(projectAuth.currentUser.uid).update({online: false});
+
             //sign user out
             await projectAuth.signOut();
 

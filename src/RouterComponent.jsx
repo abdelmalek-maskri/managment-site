@@ -15,11 +15,11 @@ const RouterComponent = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<App />}>
-            <Route index element={<Dashboard />} />
-            <Route path="create" element={<Create />} />
-            <Route path="projects/:id" element={<Project />} />
-            <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
+            <Route index element={user ? <Dashboard /> : <Navigate to='/login'/>} />
+            <Route path="create" element={user ? <Create />: <Navigate  to='/login'/>} />
+            <Route path="projects/:id" element={user ? <Project  /> : <Navigate  to='/login'/>} />
+            <Route path="login" element={user ? <Navigate to='/' /> : <Login />} />
+            <Route path="signup" element={user ? <Navigate to='/' /> : <Signup />} />
       </Route>
     )
   );

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { projectFireStore, timestamp } from "../firebase/config"
+import { projectFireStore } from "../firebase/config"
 
 
 
