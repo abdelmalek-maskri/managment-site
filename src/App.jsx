@@ -3,6 +3,9 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import { useAuthContext } from './hooks/useAuthContext'
+import OnlineUsers from './components/OnlineUsers'
+
+
 function App() {
   const { user } = useAuthContext()
   return (
@@ -12,6 +15,7 @@ function App() {
         <Navbar />
         <Outlet />
       </div>
+      {user && <OnlineUsers />}
     </div>
   )
 }

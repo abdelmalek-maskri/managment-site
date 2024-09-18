@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { projectFireStore } from "../firebase/config"
+import { db } from "../firebase/config"
 
 
 
@@ -13,7 +13,7 @@ export const useCollection = (collection, _query, _orderBy) => {
 
     useEffect(() => {
         setLoading(true);
-        let ref = projectFireStore.collection(collection);
+        let ref = db.collection(collection);
 
         if(query){
             ref = ref.where(...query)
