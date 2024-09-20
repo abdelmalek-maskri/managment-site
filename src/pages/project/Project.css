@@ -27,6 +27,7 @@
 .project-summary h4{
     color: var(--text-color);
     font-size: 0.9em;
+    margin-bottom: 10px;
 
 }
 .project-summary .assigned-users{

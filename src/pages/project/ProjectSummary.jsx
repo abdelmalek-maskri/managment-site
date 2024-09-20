@@ -23,6 +23,8 @@ export default function ProjectSummary({project}) {
         <p className='details'>
             {project.details}
         </p>
+        <h4>Project Created by: </h4>
+        <p>{project.createdBy.displayName}</p>
         <h4>Project Assigned to:</h4>
         <div className='assigned-users'>
         {project.assignedUsersList.map(user => (
