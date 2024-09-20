@@ -17,14 +17,14 @@ export default function ProjectSummary({project}) {
     <div>
       <div className="project-summary">
         <h2 className='project-title'>{project.name}</h2>
+        <p>By {project.createdBy.displayName}</p>
+
         <p className='due-date'>
             project due by {project.dueDate.toDate().toDateString()}
         </p>
         <p className='details'>
             {project.details}
         </p>
-        <h4>Project Created by: </h4>
-        <p>{project.createdBy.displayName}</p>
         <h4>Project Assigned to:</h4>
         <div className='assigned-users'>
         {project.assignedUsersList.map(user => (
