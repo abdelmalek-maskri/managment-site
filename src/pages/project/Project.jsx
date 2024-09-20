@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useDocument } from '../../hooks/useDocument'
 import 'ldrs/ring'
 import ProjectSummary from './ProjectSummary'
-
+import ProjecrComment from './ProjectComment'
 
 export default function Project() {
   const { id } = useParams()
@@ -22,6 +22,7 @@ export default function Project() {
   return (
     <div className='project-details'>
       <ProjectSummary project ={document}/>
+      <ProjecrComment project={document}/>
     </div>
   )
 }
