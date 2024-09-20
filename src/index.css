@@ -83,3 +83,14 @@ textarea{
   border-radius: 4px;
   margin: 10px 0;
 }
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This ensures the container takes up the full height of the viewport */
+}
+
+.loading {
+  display: block;
+}
