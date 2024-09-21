@@ -12,8 +12,20 @@ service cloud.firestore {
     // Make sure to write security rules for your app before that time, or else
     // all client requests to your Firestore database will be denied until you Update
     // your rules
-    match /{document=**} {
-      allow read, write: if request.time < timestamp.date(2024, 10, 15);
+    match /users/{user_id} {
+      allow read, create: if request.auth.uid != null;
+      allow update: if request.auth.uid ==  user_id;
+    }
+    match /projects/{project_id}{
+      allow read, create, update: if request.auth.uid != null;
+      allow delete: if request.auth.uid == resource.data.created_by.id;
     }
   }
+  //users collection
+  //-ANY Athenticated USER CAN READ AND create 
+  //only users who "own/created" a document can update it
+
+  //projects collection
+  //-ANY Athenticated USER CAN READ AND create and update
+  //only users who "own/created" a document can delete it
 }
