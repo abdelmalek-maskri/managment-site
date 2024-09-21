@@ -2,6 +2,8 @@
 
 CollabCanvas is a collaborative project management tool built with React, Firebase, and Firestore. It allows users to create and manage projects, assign team members, and communicate through comments, all in a user-friendly interface.
 
+**Live Demo**: You can check out the app live at [perfecto-recipes.netlify.app](https://perfecto-canvas.netlify.app/)
+
 ## Features
 
 - **User Authentication**: Secure user sign-up and login using Firebase Authentication.
