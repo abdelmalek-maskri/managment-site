@@ -83,3 +83,9 @@
     color: var(--text-color);
     font-size: 0.9em;
 }
+
+.created-by{
+    font-size: 0.85em;
+    color: #777;
+    font-weight: 500;
+}
