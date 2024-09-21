@@ -15,7 +15,7 @@ export default function Navbar() {
       <ul>
         <li className='logo'>
             <img src={Temple} alt="logo" />
-            <span>Dojo</span>
+            <span>CollabCanvas</span>
         </li>
         {!user && 
         <>
